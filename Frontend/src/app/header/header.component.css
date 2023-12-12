@@ -1,0 +1,125 @@
+/* Navbar styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.logo-container {
+  margin-right: 10px;
+}
+
+.logo {
+  border-radius: 50%;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Place the links to the left of the logo */
+.nav-links {
+  margin-right: auto; /* Push the links to the left by using margin auto */
+}
+
+/* Sidebar styles */
+#sidebar {
+  width: 250px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: transform 0.3s ease-in-out; /* For smooth transition */
+  z-index: 1000; /* Ensure sidebar stays above other content */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+  overflow-y: auto; /* Enable vertical scrollbar if content exceeds height */
+}
+.content {
+  padding: 20px;
+  margin-left: 250px;
+  transition: margin-left 0.3s ease-in-out; /* For smooth transition */
+}
+
+
+
+.parent-links {
+  list-style: none;
+  padding: 0;
+}
+
+.parent-link {
+  margin-bottom: 15px;
+}
+
+.parent-link-title {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  margin-bottom: 5px;
+  padding: 8px 12px; /* Add padding to create button-like appearance */
+  border: none;
+  border-radius: 4px;
+  background-color: #444; /* Set a background color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth color transition */
+}
+
+.parent-link-title:hover {
+  background-color: #666; /* Darken background on hover */
+  color: #fff; /* Change text color on hover */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.child-links {
+  list-style: none;
+  padding-left: 15px; /* Indent child links */
+
+}
+
+.child-links.active {
+  display: block; /* Show child links when active */
+}
+
+.semi-link {
+  margin-bottom: 5px;
+}
+
+.semi-link-title {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.semi-link-title:hover {
+  color: #fff; /* Change color on hover */
+}
+
+.slider{
+  margin-top: 20px;
+}
+
+
+@media (max-width: 768px) {
+  #sidebar {
+    transform: translateX(-250px); /* Hide sidebar off-screen by default */
+  }
+
+  .content {
+    margin-left: 0; /* Push content to full width */
+  }
+}

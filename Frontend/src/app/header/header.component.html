@@ -1,0 +1,41 @@
+<!-- Navbar Component -->
+<div class="content">
+  
+<div *ngIf="unique_table$ | async as unique_table" class="navbar">
+  <div *ngFor="let Logo of unique_table" class="logo-container">
+    <img [src]="Logo.logo" alt="Logo" width="60" class="logo"/>
+  </div>
+  <div class="nav-links" *ngIf="apiData$ | async as data">
+    <ul class="nav-list">
+      <li *ngFor="let link of data.navbar" class="nav-item">
+        <a href="#" class="nav-link">{{ link.navlinks }}</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Sidebar Component -->
+<div id="sidebar">
+  <h2>Menu :</h2>
+  <ul class="parent-links">
+    <li *ngFor="let parentLink of parentLinks" class="parent-link">
+      <a href="#" class="parent-link-title" (click)="toggleChildLinks(parentLink)">
+        {{ parentLink.ParentLinkTitle }}
+      </a>
+      <ul class="child-links" *ngIf="parentLink.showChildren">
+        <li *ngFor="let semiLink of getCorrespondingSemiLinks(parentLink.ParentLinkID)" class="semi-link">
+          <a href="#" class="semi-link-title">{{ semiLink.SemiLinkTitle }}</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  
+</div>
+<!-- <app-home></app-home> -->
+<div class="slider">
+  <app-slider></app-slider>
+</div>
+<app-cards></app-cards>
+<app-footer></app-footer>
+</div>
+

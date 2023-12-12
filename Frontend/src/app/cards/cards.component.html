@@ -1,0 +1,15 @@
+<!-- <cards.component.html -->
+<div *ngIf="cards$ | async as cards" class="cards-container">
+  <div *ngFor="let card of cards" class="card">
+    <img [src]="card.image" alt="{{ card.title }}" class="card-image">
+    <div class="card-content">
+      <h2 class="card-title">{{ card.title }}</h2>
+      <p class="card-description">{{ card.card_desc }}</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+

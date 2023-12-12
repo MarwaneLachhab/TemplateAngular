@@ -1,0 +1,13 @@
+<footer *ngIf="footer_link$ | async as footer_link" class="footer">
+     
+    <h4>Contact us</h4>
+
+    <div *ngFor="let Link of footer_link">
+
+        <a href="#">{{ Link.footer_link }}</a>
+    </div>
+    <br>
+
+    <p>&copy; 2023 Your Company. All rights reserved.</p>   
+
+  </footer>
