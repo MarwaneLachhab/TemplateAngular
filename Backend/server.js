@@ -11,7 +11,7 @@ app.use(cors());
 const config = {
   user: 'username',
   password: 'password',
-  server: 'DESKTOP-E9K35QG\\SQLEXPRESS',
+  server: 'DESKTOP-XXXXXXX\\SQLEXPRESS',
   database: 'templateSite',
   options: {
     encrypt: false, // Use true if connecting to Azure SQL Database
