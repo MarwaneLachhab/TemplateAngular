@@ -9,8 +9,8 @@ app.use(cors());
 
 // Configure your SQL Server connection
 const config = {
-  user: 'sparo',
-  password: 'rachidia.02',
+  user: 'username',
+  password: 'password',
   server: 'DESKTOP-E9K35QG\\SQLEXPRESS',
   database: 'templateSite',
   options: {
